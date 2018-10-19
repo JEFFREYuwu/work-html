@@ -1,0 +1,122 @@
+/* ------------------------------------------------------------------------------------
+
+					FLEXBOX DEMO FOR PRACTICE
+
+
+------------------------------------------------------------------------------------ */
+
+html, body {
+	background-color: black;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+/*
+#flexC {
+    
+ NEW FLEX PROPERTY
+    
+    
+    height: 150px;
+    
+    display: flex;
+    background-color:  white;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+    
+
+}
+*/
+
+/*
+
+ul li {
+ UNLOCKED FLEX-GROW (ONLY IF ACTIVE)
+    
+    flex-grow: 1;
+    padding-top: 45px;
+    color: white;
+    text-align:center;
+
+}
+*/
+
+ul li:first-child { background-color: burlywood; }
+ul li:nth-child(2) { background-color:cadetblue; }
+ul li:nth-child(3) { background-color: darkkhaki; }
+ul li:nth-child(4) { background-color: crimson; }
+ul li:nth-child(5) { background-color: fuchsia; }
+ul li:last-child { background-color: chartreuse; }
+
+
+
+/* FIRST IN AM GOING TO INTRODUCE THE FLEX DISPLAY */
+
+
+#flexC {
+    display: flex;
+     background-color:  white;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 500px;
+    
+/*    flex-wrap: wrap-reverse;*/
+    
+/* WHEN USING JUSTY CONTENT IT CANT BE USED WITH FLEX GROW
+    */
+/*    justify-content: flex-end;*/
+/* justy-content: space-between*/
+    
+    align-items: flex-start;
+/*    align-items: center;*/
+
+}
+
+
+
+li {.
+    
+  width: 100px;
+  height: 100px;
+  background-color: #8cacea;
+  margin: 8px;
+}
+
+
+
+
+
+/* MAKE ALL THE ITEMS EQUAL SIZE TO THE VIEW PORT */
+
+
+ul li {
+    
+/*    flex-grow: 1;*/
+    width: 200px;
+    height: 150px;
+    color: white;
+    text-align: center;
+    
+
+}
+
+
+
+#flexC {
+
+}
+
+ul li {
+
+}
+
+
+
+
+

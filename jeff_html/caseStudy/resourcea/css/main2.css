@@ -1,0 +1,857 @@
+/* This is a fictional website created in the just course*
+------------------------------------------------------
+
+
+-----------------------------------------------------/
+
+/        *Website color scheme*     
+
+---------------------------------------------------------
+
+Main Colours:
+
+Primary colour - rgb(183, 154, 246); //purple for navigation links
+Secondary colour - rgb(53, 38, 80); //darker purple
+Third colour - rgb(200, 177, 250); //lighter purple/
+
+/**/
+
+/* custom fonts---------------------------------------------- */
+
+
+
+
+/*imported CSS to use font from font-face website.
+*/
+
+@font-face {
+    font-family: '28_days';
+    src: url(../../vendors/fonts/28_days_later-webfont.eot);
+    src: url(../../vendors/fonts/28_days_later-webfont.eot?#iefix) format('embedded-opentype'),
+         url(../../vendors/fonts/28_days_later-webfont.woff2) format('woff2'),
+         url(../../vendors/fonts/28_days_later-webfont.woff) format('woff'),
+         url(../../vendors/fonts/28_days_later-webfont.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+
+
+/*-------------------  DEFAULT STYLING---------------------------- */
+
+/* here we set the sizing to border box so that the padding and the border have no barring on the width we set */
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    
+}
+
+
+
+/*  All images and video are set to 100% of their parent container*/
+
+img, video { 
+    width: 100%;
+}
+
+
+/* Body attributes that the rest of the page inherits*/
+
+body{ 
+    
+    
+/* Mukta icon called directly as in html library is the declared*/
+    
+    font-family: 'Mukta', sans-serif;
+    font-family:sans-serif;
+    font-size: 16px;
+    color:rgb(42, 42, 42);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+      
+}
+
+/* removes the styling that comes with the anchor tag*/
+
+a {
+    text-decoration: none;
+}
+
+/*----------------------------------------------------------------
+
+
+  HOMEPAGE STYLING 
+
+-----------------------------------------------------------------*/
+
+.myvideo{
+     
+    display: none;
+    
+    
+}
+
+
+
+
+
+
+.HOMEImage{
+    position: relative;
+    background-image: url(../img/trainerHomePage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    background-position: center 0;
+    height: 100vh;
+    
+}
+
+
+.logoC{
+    position: absolute;   
+    width: 40px;
+    top: auto; 
+    left: 1;
+    
+        
+}
+
+.BasketC{
+    
+    position: absolute;
+    top: 1.3vh;
+    left:  45vw;
+}
+
+
+.headerC{
+    
+    position: fixed;
+    width:100%;
+    
+   
+    
+}
+
+
+
+/* scales icon handles the actual icon*/
+
+.fa-shopping-basket{
+    font-size: 2em;
+    color: rgb(200,177, 250);
+    
+}
+
+
+/* div container for the unordered list*/
+
+
+.navC{
+    background-color: rgb(53, 38, 80);
+    width:100%;
+    height:50px;
+    border-bottom: 2px solid rgb(200,177, 250);
+    
+    
+}
+
+
+
+/*this is three bar option*
+/ sets value a relation postioon in div that has nav*/
+
+#mobile-menu{
+    
+   font-size: 2em;
+    text-align: center;
+    color: rgb(255,255,255);
+    background-color:rgba(0,0,0,0.5);
+    
+    margin: 0 5vw 0 85vw;
+    padding: 7px 3%;    
+    
+}
+    
+   
+/*navigation area*/
+
+
+
+/*removing styling from our unordered list, will not display--*/
+
+
+.menu-items{
+    
+    list-style: none;
+    padding:0;
+    margin:0;
+    display: none;
+      
+}
+    
+nav li { 
+          
+        color: rgb(255,255,255);
+        text-align: right;
+        border-top: 2px solid rgba(200,177,250, 0.2);
+        padding: 15px 8px 15px 0px 
+        
+    }
+
+
+li a{
+    color: rgb(255,255,255);
+    
+}
+    
+.mainHeading{
+    
+   font-family: 'Lovers Quarrel', cursive;
+   color: rgb(255,255,255);
+    font-size: 2em;
+    letter-spacing: 2px;
+    font-weight: lighter;
+      
+     margin: 45vh auto 0 30vw;
+    
+}
+    
+.slogan{  
+    font-family: '28_days';
+    color: rgb(255,255,255);
+    font-size: 2em;
+    letter-spacing: 3px;
+    padding: 150px 3vw 0 0;
+    text-align: right;
+  
+}  
+
+/*Designing our button*/
+
+.newButton{
+    
+    color: rgb(255,255,255);
+    border: 1px solid rgb(255,255,255);
+    padding: 15px 20px;
+    background-color: rgba(200,177, 250, 0.2);
+    text-transform: uppercase;
+    
+/* Below code makes button curved   */
+    
+    
+    border-radius: 7px 7px;
+      
+/*  applying our animation 
+    */
+    
+    animation-name: neon;
+    animation-duration: 1.5s; 
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+/*    positioning on screen*/
+    
+    margin: 10px auto 0 30vw;
+    
+    
+}
+    
+/* Animating our buttons  */
+        
+
+
+@keyframes neon{
+    
+/* the text-shadow property has 4 values
+    
+1. horizontal shadow-required
+ 2. vertical shadow-required
+3 blur radius -optional
+    4 color- option
+    
+    
+    */
+    
+    
+    from {
+        text-shadow: 0 0 10px rgb(255,255,255),
+         0 0 20px rgb(255,255,255),
+         0 0 30px rgb(255,255,255),
+         0 0 40px rgb(128,0,128),
+         0 0 50px rgb(128, 0, 128),
+         0 0 80px rgb(128, 0, 128),
+         0 0 100px rgb(128, 0, 128),
+         0 0 150px rgb(128, 0, 128);
+    
+   
+    }
+    
+    to{
+         text-shadow: 0 0 5px rgb(255,255,255),
+         0 0 10px rgb(255,255,255),
+         0 0 15px rgb(255,255,255),
+         0 0 20px rgb(128,0,128),
+         0 0 25px rgb(128, 0, 128),
+         0 0 30px rgb(128, 0, 128),
+         0 0 50px rgb(128, 0, 128),
+         0 0 75px rgb(128, 0, 128);
+    
+    }
+    
+}
+/*  ------------------------------------------------------------------------
+                     PRODUCT PAGE
+    ------------------------------------------------------------------------
+    */
+    
+    
+    #productSection{
+        
+        
+        text-align: center;
+           
+        
+    }
+    
+    
+    
+    h1{
+        
+        
+        text-transform: uppercase;
+        font-weight: lighter;
+}
+    
+   
+     p{
+  
+       
+        text-transform: uppercase;
+        
+    }
+    
+    
+/*    designing our buttons
+    */
+    
+    
+    .addToCart{
+        
+        background-color: rgb(53, 38, 80);
+        color: rgb(255,255,255);
+        padding: 15px 20px;
+/*        border below curve*/
+           
+        border-radius: 7px 7px;
+        border: 1px solid rgba(255, 255, 255, 0.5;)
+        
+     }
+
+
+
+/* class which relates to button add to cart this acceses  the attributes for the a element */
+
+
+.addToCart a{
+      color: rgb(255, 255, 255);
+    
+    
+}
+
+
+/* psuedo selector
+
+used to put basket image into button
+
+
+*/
+    
+.addToCart a::after {
+    
+    
+          font-family: "Font Awesome 5 free";
+          font-weight: 900;
+          content: "\f218";
+          
+    
+}
+    
+/* sales page----------------------------------------------------------
+
+*/
+
+#sales{
+    
+      text-align: center;
+}
+
+/* calling the details of each image using the tag*/
+figcaption{
+    
+      font-size: 0.8em;
+    
+}
+
+/* strong text relates to figure caption */
+strong{
+    
+    
+/* makes text display on the line below*/
+    display:block;
+}
+
+
+/*Flexboxes for product and sales
+*/
+
+.flexbox{
+    
+     display: flex;
+     flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------- LARGER MOBILE SIZE 568---------------------------
+---------------------------------------------------*/
+
+
+
+
+
+/* used for media query to adjust website for different devices*/
+/*ADRESSESS THE SCREEN AT 568PX AND ABOVE*/
+
+@media screen and (min-width: 568px){
+    
+    
+    
+    
+
+.mainHeading{
+    
+     margin: 45vh auto 0 37vw;
+    
+}
+    
+
+.newButton{
+    
+    margin: 10px auto 0 37vw;
+    
+    
+}
+
+
+}
+
+
+    #contact{
+        text-align: center;
+            
+                                          
+            background-image:
+                linear-gradient(rgba(8, 8, 8, 0.8),rgba(8, 8,8,0.6)
+                )
+                
+                ,url(../img/trainerContactBackground.jpg);
+            
+    background-repeat: no-repeat;  
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    background-position: center 0;
+    height: 100vh;
+    
+    
+        }     
+        
+        
+        
+        
+        
+        
+  /* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    background-color: rgba( 8, 8, 8, 0.2);
+    
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: rgba( 8, 8, 8, 0.7);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+    border-radius: 5px;
+    background-color:rgba(0,0,0,0.08);
+    padding: 20px;
+}      
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERY FOR TABLET 768  */
+@media screen and (min-width: 768px){
+
+    .mainHeading{
+
+     margin: 2.5vh auto 0 76vw;
+    
+}
+    
+
+.newButton{
+    
+    margin: 10px auto 0 76vw;
+    
+    
+    
+    
+    
+    
+}
+
+/* MEDIA QUERY FOR DESKTOP 1024  */
+    
+    
+    @media screen and (min-width: 1024px){
+
+.logoC{
+    position: absolute;
+    width: 90px;
+    top: 6vh;
+    left: 5vw;
+    
+        
+}
+
+
+  /* MEDIA QUERY FOR extra large screen 1280  */      
+        
+        
+  @media screen and (min-width: 1280px){
+      
+      .myvideo{
+          
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+          
+        background-size: cover;
+          text-decoration-color: aquamarine;
+         filter: brightness(20%);
+          
+          
+/*set z idex so behind current content          */
+          
+         z-index: -4000; 
+         
+          
+          
+          
+          
+      }
+      
+      
+      
+      .HOMEImage{
+          
+          background-image: none;
+        
+          
+      }
+      
+      
+        }
+    
+    
+          
+        
+        
+        
+        
+        
+        
+        
+        
+        
+/*.headerC{*/
+
+
+.navC{
+    
+   text-align: right;
+    border-bottom: none;  
+    padding:10px 0;
+    height: auto;
+}
+        
+        
+        
+/*  calling two classes together to assign both of the
+        related to basket image put in div and icon put in a span using a id class*/
+        
+#mobile-menu{
+    
+  display: none;
+    
+}
+ 
+/*  POSITION THE DIV THAT CONTAINS BASKET IMAGE*/
+        
+        .BasketC{
+        position: absolute;
+        margin: 0 0 0 52vw;
+        
+        }
+        
+/*  RESIZES THE ICON THAT IS THE IMAGE OF A BASKET*/
+        
+      .fa-shopping-basket{
+    font-size: 1em;
+    color: rgb(200,177, 250);
+    
+}          
+
+
+.menu-items{
+    
+    display:inline;
+      
+}
+        
+        
+  .menu-items li {
+    border-top: none;
+    display:inline;
+      
+}      
+        
+        
+        
+    
+nav li { 
+          
+        
+        text-align: right;
+        border-top: 2px solid rgba(200,177,250, 0.2);
+        padding: 15px 5px 15px 0;
+        
+    }
+
+
+li a{
+    padding: 20px;
+    margin: 0 5px;
+    
+}
+    
+/* hovers over a makes a color appear*/
+        
+        nav a:hover{
+            
+            color:rgb(200,177,250);
+        }       
+        
+        
+        nav:active{
+            color:rgb(200,177,250);
+            
+        }
+        
+        
+/*        nav:visited
+            color:rgb(128, 0, 128);
+            
+        }
+        */
+        
+        
+        
+        
+.mainHeading{
+   
+      
+     margin:25vh auto 0  4.6vw;
+    
+}
+    
+.slogan{  
+    font-size: 3em;
+    padding: 210px 0 0 0;
+    margin: 0px 23vh 0;
+  
+}  
+
+
+.newButton{
+    
+    
+    margin: 10px auto  0 4.6vw;
+}
+    
+        
+        
+/*  ADDING FORMS CSS      */
+        
+        
+        
+   
+        #contact{
+        text-align: center;
+            
+                                          
+            background-image:
+                linear-gradient(rgba(8, 8, 8, 0.8),rgba(8, 8,8,0.6)
+                )
+                
+                ,url(../img/trainerContactBackground.jpg);
+            
+    background-repeat: no-repeat;  
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    background-position: center 0;
+    height: 100vh;
+    
+    
+        }     
+        
+        
+        
+        
+        
+        
+  /* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    background-color: rgba( 8, 8, 8, 0.2);
+    
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: rgba( 8, 8, 8, 0.7);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+    border-radius: 5px;
+    background-color:rgba(0,0,0,0.08);
+    padding: 20px;
+}      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+
+
+        
